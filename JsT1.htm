@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript t1</title>
+    <style>
+        div input { width: 40px; text-align: right;}
+    </style>
+</head>
+<body>
+    <input id="metn1" type="text" placeholder="Ad daxil et" />
+    <button id="btn">&#10094;=&#10095;</button>
+    <input id="metn2" type="text" placeholder="Ad daxil et"  />
+    <br><br>
+    <div>
+        <input id="a" type="number" />
+        <input id="b" type="number" />
+        <input id="c" type="number" />
+        <button id="tikla">Ok</button>
+        <br>
+        Cem:<span id="cem"></span>
+        <br>
+        Ort:<span id="ort"></span>
+        <br>
+        Hasil:<span id="hasil"></span>
+    </div>
+    
+    
+
+    <script>
+        const metn1=document.getElementById("metn1")        
+        const btn=document.getElementById("btn")
+        const metn2=document.getElementById("metn2")    
+        
+        
+        
+        btn.onclick=function() {
+		    let c = metn1.value
+            metn1.value = metn2.value
+            metn2.value = c
+        }   
+  
+        const a=document.getElementById("a")
+        const b=document.getElementById("b")
+        const c=document.getElementById("c")
+        const cem =document.getElementById("cem")  
+        const ort=document.getElementById("ort")  
+        const hasil=document.getElementById("hasil")
+
+         tikla.onclick=function() {
+            cem.innerHTML = +a.value + +b.value + +c.value
+            ort.innerHTML= (+a.value + +b.value + +c.value)/3
+            hasil.innerHTML = a.value*b.value*c.value   
+        }
+    </script>
+</body>
+</html>
